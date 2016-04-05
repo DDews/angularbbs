@@ -1,0 +1,23 @@
+<div class="forumbg row">
+    <div class="row">
+        <div class="col s4 list-inner">Topic</div>
+        <div class="col s2 views">Threads</div>
+        <div class="col s2 views">Posts</div>
+        <div class="col s4 list-inner">Last Post</div>
+    </div>
+    <div class="row" ng-repeat="board in boards">
+        <div class="col s4">
+            <div class="row"><p class="homesubject"><a href="/topic/0">{{board.name}}</a></p>
+                <p class="homesmallsubject">{{board.desc}}</p>
+            </div>
+        </div>
+        <div class="col s2 center">0</div>
+        <div class="col s2 center">0</div>
+        <div class="col s4">
+            <div class="row">
+                <p class="subject"><a href="/posts/0/0">Testing one two three</a></p>
+                <p class="homesmallsubject">by <a class="username" href="/profile/username">username</a> 06/17/1986 1:00</p>
+            </div>
+        </div>
+    </div>
+</div>

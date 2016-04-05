@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulletin Board</title>
+    <link rel="stylesheet" type="text/css" href="bbs.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <script src="boards.js"></script>
+</head>
+<body ng-app="app">
+<h1>Bulletin Board</h1>
+Welcome to the bulletin board.
+<div ng-view></div>
+<div class="roundbg col s12" ng-controller="Login" ng-switch="loggedIn">
+    <div ng-switch-when="false">
+        <div ng-include="'login.html'"></div>
+    </div>
+    <div ng-switch-when="true">
+        <a ng-click="logout()">logout</a>
+    </div>
+</div>
+</body>
+</html>
