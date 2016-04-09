@@ -1,4 +1,18 @@
 <div class="forumbg row">
+    <div class="round row">
+        <p class="right"><a ng-click="toggle()">New Topic</a></p>
+        <div class="col s12" id="error"></div>
+        <div ng-switch="toggleForm">
+            <div ng-switch-when="On">
+                <form class="createTopic">
+                    <input type="text" name="board" placeholder="Board name" />
+                    <input type="text" name="desc" placeholder="Description" />
+                    <input type="submit" name="create" class="buttoncolor" value="Create" />
+                </form>
+                <script>$('[name=board]').focus();</script>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col s4 list-inner">Topic</div>
         <div class="col s2 views">Threads</div>

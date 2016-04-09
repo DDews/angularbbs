@@ -50,12 +50,19 @@ angular.module('app', ['ngRoute'])
     .controller('Login',function($scope) {
         $scope.loggedIn = "false";
     })
-    .controller('LoginForm', function($scope) {
+    .controller('LoginForm', function($scope, $http) {
         $scope.loginForm = "login";
         $scope.setForm = function(mode) {
             $scope.loginForm = mode;
         }
         $scope.register = function() {
             console.log("wtf");
+            $http({
+                method: 'POST',
+                url: '/bbs/rest/hello',
+                data: {name: "test1", desc: "test2"},
+                headers: {
+                    'Content-Type': 'application/json'
+                }});
         }
     });

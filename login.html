@@ -6,7 +6,7 @@
             <input type="password" name="password" placeholder="password" />
             <div ng-switch-when="register">
             <input type="password" name="password2" placeholder="retype password" />
-            <input type="submit" class="buttoncolor" name="submit" value="register" />
+            <input ng-click="register()" type="submit" class="buttoncolor" value="register" />
             <br><a ng-click="setForm('login')">login</a>
             </div>
             <div ng-switch-when="login">
